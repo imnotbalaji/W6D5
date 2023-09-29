@@ -19,7 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_29_185940) do
     t.string "color", null: false
     t.string "name", null: false
     t.string "sex", limit: 1, null: false
-    t.text "Description"
+    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

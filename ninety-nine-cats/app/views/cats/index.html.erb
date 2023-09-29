@@ -1,0 +1,13 @@
+<h1>Here are your cats!</h1>
+
+<% @felines.each do |feline| %>
+<ul>
+    <li><%= feline.name %></li>
+    <li><%= feline.sex %></li>
+    <li><%= feline.color %></li>
+    <li><%= feline.birth_date %></li>
+    <li><%= feline.description%></li>
+</ul>
+<br>
+<% end %>
+

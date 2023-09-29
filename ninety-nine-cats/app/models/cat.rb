@@ -7,8 +7,8 @@ class Cat < ApplicationRecord
     validates :sex, presence: true, inclusion: {in: ['M', 'F'], message: 'sex not valid'}
     validate :birth_date_cannot_be_future
 
-    def self.birth_date_cannot_be_future
-        if (birth_date <=> Date.today) != 1
+    def birth_date_cannot_be_future
+        if (birth_date <=> Date.today) == 1
             errors.add(:birth_date, 'birth date cant be in the future')
         end
     end

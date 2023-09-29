@@ -1,0 +1,32 @@
+<h1>edit a cat!</h1>
+
+<form action="<%= cat_url(@feline) %>" method="post">
+<input type="hidden" name="_method" value="patch">
+
+    <label for="name">name</label>
+    <input id="name" type="text" value="<%@feline.name%>" name="cat[name]">
+
+    <br>
+
+    <label for="sex">sex</label>
+    <input id="sex" type="text" value="<%@feline.sex%>" name="cat[sex]">
+
+    <br>
+
+    <label for="color">color</label>
+    <input id="color" type="text" value="<%@feline.color%>" name="cat[color]">
+
+    <br>
+
+    <label for="birth_date">birth_date</label>
+    <input id="birth_date" type="text" value="<%@feline.birth_date%>" name="cat[birth_date]">
+
+    <br>
+
+    <label for="description">description</label>
+    <input id="description" type="textarea" name="cat[description]">
+
+    <br>
+
+    <input type="submit" value="update cat">
+</form>

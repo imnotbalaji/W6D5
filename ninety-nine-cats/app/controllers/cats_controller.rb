@@ -12,13 +12,27 @@ class CatsController < ApplicationController
             render json: @feline.errors.full_messages, status: 422
         end 
     end 
+
     def new
+        render :new
     end 
+
     def create
+        @feline = Cat.new(cat_params)
+
+        if @feline.save
+            redirect_to cat_url(@feline)
+        else
+            render json: @feline.errors.full_messages, status: 422
+        end
     end 
+
     def edit 
+
     end 
+
     def update
+
     end 
     
 

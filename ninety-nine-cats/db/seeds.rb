@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+Cat.destroy_all
+ApplicationRecord.connection.reset_pk_sequence!(cats)
 
 molly = Cat.create!(name: "Molly", sex: "M", color: "black",birth_date: "2015/01/01")
 crookshanks = Cat.create!(name: "crookshanks", sex: "F", color: "white",birth_date: "2016/01/01")

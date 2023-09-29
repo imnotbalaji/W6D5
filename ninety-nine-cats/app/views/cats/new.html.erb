@@ -1,0 +1,30 @@
+<h1>Add a cat!</h1>
+
+<form action="<%= cats_url %>" method="post">
+    <label for="name">name</label>
+    <input id="name" type="text" name="cat[name]">
+
+    <br>
+
+    <label for="sex">sex</label>
+    <input id="sex" type="text" name="cat[sex]">
+
+    <br>
+
+    <label for="color">color</label>
+    <input id="color" type="text" name="cat[color]">
+
+    <br>
+
+    <label for="birth_date">birth_date</label>
+    <input id="birth_date" type="text" name="cat[birth_date]">
+
+    <br>
+
+    <label for="description">description</label>
+    <input id="description" type="textarea" name="cat[description]">
+
+    <br>
+
+    <input type="submit" value="create cat">
+</form>
